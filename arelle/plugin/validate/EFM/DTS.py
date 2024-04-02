@@ -299,11 +299,11 @@ def checkFilingDTS(val, modelDocument, isEFM, isGFM, visited):
                             modelObject=modelConcept, concept=modelConcept.qname, conceptLocalName=modelConcept.qname.localName)
 
                     #6.7.31 (version 27) fractions
-                    if modelConcept.isFraction:
-                        val.modelXbrl.error("EFM.6.07.31",
-                            _("Element %(concept)s is declared as a fraction item type.  Change or remove the declaration."),
-                            edgarCode="du-0731-Fraction-Item-Type",
-                            modelObject=modelConcept, concept=modelConcept.qname)
+                    # if modelConcept.isFraction:
+                    #     val.modelXbrl.error("EFM.6.07.31",
+                    #         _("Element %(concept)s is declared as a fraction item type.  Change or remove the declaration."),
+                    #         edgarCode="du-0731-Fraction-Item-Type",
+                    #         modelObject=modelConcept, concept=modelConcept.qname)
 
                     #6.7.32 (version 27) instant non numeric
                     if modelConcept.isItem and not isDuration:
